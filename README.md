@@ -168,4 +168,5 @@ We use the following libraries as dependencies inside of Kinto:
 
 ### License
   Copyright (c) 2017-present, Karizma, LTD.
+  www.karizma.io
 All rights reserved.
