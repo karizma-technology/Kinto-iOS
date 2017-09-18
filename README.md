@@ -73,6 +73,23 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     
 ```
 
+### Include Key
+ Make the query include `KintoObject`s that have a reference stored at the provided key. This has an effect similar to a join. The recordName must have the same name of the reference collection name.
+
+```Swift
+    let query = KintoQuery(collectionName: String)
+    query.includeKey(recordName: String)
+```
+
+Example: 
+
+```Swift
+    let query = KintoQuery(collectionName: "car")
+    query.includeKey(recordName: "user")
+    query.getFirstObject { (object, error) in
+            print("Car owner", (object["user"] as! [KintoObject])[0]["name"] as! String)
+    }
+```
 
 ### SAVE
 
